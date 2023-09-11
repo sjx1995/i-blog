@@ -65,8 +65,12 @@ const inMainPage = computed(() => route.fullPath === "/");
   }
   &.mini {
     width: 340px;
+    max-width: 340px;
     margin-top: 164px;
-    margin-left: 50vw;
+    margin-left: 60vw;
+    @media screen and (max-width: 1000px) {
+      margin-left: 50vw;
+    }
     @media screen and (max-width: 800px) {
       margin-left: calc((100vw - 340px) / 2 + 24px);
     }
