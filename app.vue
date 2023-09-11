@@ -258,7 +258,7 @@ main.full {
   .content {
     width: calc(100% - 16px * 2);
     left: 16px;
-    top: 80px;
+    top: 144px;
   }
   .border-top {
     top: -16px;

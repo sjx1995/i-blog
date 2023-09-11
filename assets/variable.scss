@@ -20,3 +20,24 @@ $tip_text_hover_color: rgba(11, 121, 55, 1);
   color: $tip_text_color;
   text-shadow: 1px 4px 6px $footer_color, 0 0 0 #000, 1px 4px 6px $footer_color;
 }
+
+@mixin rainbowText {
+  background-color: #ca4246;
+  background-image: linear-gradient(
+    144deg,
+    #d41426 16.666%,
+    #e05531 16.666%,
+    #e05531 33.333%,
+    #f17f33 33.333%,
+    #f17f33 50%,
+    #7a8f52 50%,
+    #7a8f52 66.666%,
+    #3f6088 66.666%,
+    #3f6088 83.333%,
+    #96488b 83.333%
+  );
+  background-size: 100%;
+  background-repeat: repeat;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

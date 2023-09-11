@@ -19,7 +19,6 @@ onMounted(() => {
       node.setAttribute("class", "rainbow-text");
     }
   });
-  console.log(res);
 });
 </script>
 
@@ -27,6 +26,9 @@ onMounted(() => {
   <div class="code-bg">
     <div class="code-wrapper">
       <code class="lang-javascript" v-html="codeHtml"></code>
+      <div class="left-mask"></div>
+      <div class="right-mask"></div>
+      <div class="bottom-mask"></div>
     </div>
   </div>
 </template>
@@ -39,40 +41,55 @@ onMounted(() => {
   width: 100vw;
   overflow: hidden;
   .code-wrapper {
-    font-size: 34px;
+    position: relative;
     width: 2500px;
-    font-family: monospace, system-ui;
     word-break: break-all;
-    font-weight: 700;
-    line-height: 48px;
-    transform: translate(calc((100vw - 2500px) / 2), 0);
+    transform: translate(-26%, 0);
+
+    @media screen and (min-width: 800px) {
+      transform: translate(-20%, 0);
+    }
+    @media screen and (min-width: 1280px) {
+      transform: translate(calc((100vw - 2500px) / 2), 0);
+    }
+    .left-mask {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      width: 400px;
+      background: linear-gradient(to right, $bg_color, transparent);
+    }
+    .right-mask {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 400px;
+      background: linear-gradient(to left, $bg_color, transparent);
+    }
+    .bottom-mask {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 200px;
+      background: linear-gradient(to top, $bg_color, transparent);
+    }
 
     // hljs
     code {
       color: #ffffff07;
       user-select: none;
+      font-family: "LXGW WenKai" !important;
+      font-size: 38px;
+      font-weight: 700;
+      line-height: 48px;
     }
   }
 }
 
 .rainbow-text {
-  background-color: #ca4246;
-  background-image: linear-gradient(
-    65deg,
-    #d41426 16.666%,
-    #e05531 16.666%,
-    #e05531 33.333%,
-    #f17f33 33.333%,
-    #f17f33 50%,
-    #7a8f52 50%,
-    #7a8f52 66.666%,
-    #3f6088 66.666%,
-    #3f6088 83.333%,
-    #96488b 83.333%
-  );
-  background-size: 100%;
-  background-repeat: repeat;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  @include rainbowText;
 }
 </style>

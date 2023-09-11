@@ -12,7 +12,7 @@ const year =
   <div class="footer">
     <div class="footer-item">© Sunly {{ year }}</div>
     <div class="footer-item">
-      <a href="https://github.com/sjx1995" target="_blank">
+      <a href="https://github.com/sjx1995/i-blog" target="_blank">
         <Icon name="mdi:github" />
         Github
       </a>
