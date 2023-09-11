@@ -55,7 +55,7 @@ withDefaults(
     padding: 8px;
     color: #1f1f1f;
     transition: all 0.3s;
-    transition-timing-function: cubic-bezier(0.22, 0.61, 0.36, 1);
+    transition-timing-function: cubic-bezier(0.87, -0.41, 0.19, 1.44);
     background-color: $content_color_level0;
     &:hover {
       color: #c41d7f;
