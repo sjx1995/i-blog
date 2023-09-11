@@ -2,3 +2,7 @@ body {
   font-family: "LXGW WenKai";
   font-weight: "Regular";
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

@@ -19,36 +19,25 @@ provide("handleToTop", handleToTop);
 </script>
 
 <template>
-  <div class="bg">
-    <main :class="[inMainPage ? 'mini' : 'full']" ref="mainEl">
-      <div class="content">
-        <NuxtPage />
-        <div class="outer-right-border"></div>
-        <div class="outer-bottom-border"></div>
-        <div class="footer-shadow"></div>
-        <div class="inner-top-border"></div>
-        <div class="inner-left-border"></div>
-        <div class="border-top"></div>
-        <div class="border-right"></div>
-        <div class="border-bottom"></div>
-        <div class="border-left"></div>
-        <IFooter class="footer" />
-      </div>
-    </main>
-  </div>
+  <CodeBg />
+  <main :class="[inMainPage ? 'mini' : 'full']" ref="mainEl">
+    <div class="content">
+      <NuxtPage />
+      <div class="outer-right-border"></div>
+      <div class="outer-bottom-border"></div>
+      <div class="footer-shadow"></div>
+      <div class="inner-top-border"></div>
+      <div class="inner-left-border"></div>
+      <div class="border-top"></div>
+      <div class="border-right"></div>
+      <div class="border-bottom"></div>
+      <div class="border-left"></div>
+      <IFooter class="footer" />
+    </div>
+  </main>
 </template>
 
 <style lang="scss" scoped>
-.bg {
-  background-color: $bg_color;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-}
-::-webkit-scrollbar {
-  display: none;
-}
-
 main {
   position: absolute;
   height: 100vh;
@@ -57,6 +46,7 @@ main {
   &.mini {
     margin-left: 50vw;
     width: 400px;
+    max-width: 400px;
     @media screen and (max-width: 800px) {
       margin-left: calc((100vw - 400px) / 2);
     }
@@ -72,7 +62,7 @@ main {
       width: 100vw;
       max-width: 100vw;
       .content {
-        top: 16px !important;
+        top: 8px !important;
       }
     }
 
