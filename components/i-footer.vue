@@ -48,7 +48,6 @@ const year =
     text-decoration: none;
 
     .icon {
-      vertical-align: text-bottom;
       font-size: 20px;
       color: #00000088;
     }

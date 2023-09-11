@@ -18,7 +18,8 @@ const showToTop = computed(() => inject<Ref<boolean>>("showToTop")?.value);
 <template>
   <article class="prose article-main" ref="mainEl">
     <ArticleTool
-      :style="{ top: `${-top + 120}px` }"
+      :top="top"
+      :idx="1"
       icon="ep:back"
       @click="() => router.push({ path: '/' })"
     />
@@ -28,7 +29,8 @@ const showToTop = computed(() => inject<Ref<boolean>>("showToTop")?.value);
     >
       <ArticleTool
         v-show="showToTop"
-        :style="{ top: `${-top + 220}px` }"
+        :top="top"
+        :idx="2"
         icon="ep:top"
         @click="handleToTop"
       />
@@ -43,7 +45,6 @@ const showToTop = computed(() => inject<Ref<boolean>>("showToTop")?.value);
   position: relative;
   padding: 32px 64px;
   .article-tool {
-    position: absolute;
     left: -16px;
     z-index: 20;
   }

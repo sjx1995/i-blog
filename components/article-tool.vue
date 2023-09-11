@@ -6,11 +6,30 @@
 <script setup lang="ts">
 defineProps<{
   icon: string;
+  top: number;
+  idx: number;
 }>();
+
+const less800 = computed(() => useWindowSize().width.value <= 800);
 </script>
 
 <template>
-  <div class="article-tool">
+  <div
+    class="article-tool"
+    :style="
+      less800
+        ? {
+            position: 'fixed',
+            left: '0px',
+            top: `${20 + idx * 100}px`,
+          }
+        : {
+            position: 'absolute',
+            left: '-16px',
+            top: `${20 + idx * 100 - top}px`,
+          }
+    "
+  >
     <Icon :name="icon" />
   </div>
 </template>
