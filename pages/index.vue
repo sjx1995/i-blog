@@ -1,26 +1,22 @@
 <!--
- * @Description: 
+ * @Description: 主页
  * @Author: Sunly
  * @Date: 2023-09-09 17:37:41
 -->
-<script setup lang="ts">
-const router = useRouter();
-const handleToPost = (path?: string) => {
-  path && router.push({ path });
-};
-</script>
-
 <template>
-  <h1>hello nuxt</h1>
-  <ContentList path="/posts" :query="{ only: ['title', '_path'] }">
+  <ContentList
+    path="/posts"
+    :query="{ only: ['title', '_path', 'description', 'dateTime'] }"
+  >
     <template v-slot="{ list }">
-      <div
+      <MenuItem
         v-for="item of list"
         :key="item._path"
-        @click="handleToPost(item._path)"
-      >
-        <div class="title">{{ item.title }}</div>
-      </div>
+        :title="item.title"
+        :desc="item.description"
+        :dateTime="item.dateTime"
+        :url="item._path"
+      />
     </template>
   </ContentList>
 </template>
