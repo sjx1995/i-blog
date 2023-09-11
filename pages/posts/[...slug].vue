@@ -9,10 +9,11 @@ const router = useRouter();
 
 const mainEl = ref<HTMLDivElement | null>(null);
 const { top } = useElementBounding(mainEl);
+const showToTop = computed(() => top.value < -150);
 
-// 接收app组件提供的回到顶部功能
-const handleToTop = inject<() => void>("handleToTop");
-const showToTop = computed(() => inject<Ref<boolean>>("showToTop")?.value);
+const handleToTop = () => {
+  window?.scrollTo({ top: 0, behavior: "smooth" });
+};
 </script>
 
 <template>

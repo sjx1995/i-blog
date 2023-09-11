@@ -36,10 +36,13 @@ onMounted(() => {
 <style lang="scss">
 .code-bg {
   background-color: $bg_color;
-  position: absolute;
+  position: fixed;
+  top: 0;
+  left: 0;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
+  z-index: -1;
   .code-wrapper {
     position: relative;
     width: 2500px;

@@ -21,12 +21,12 @@ const less800 = computed(() => useWindowSize().width.value <= 800);
         ? {
             position: 'fixed',
             left: '0px',
-            top: `${80 + idx * 100}px`,
+            top: `${92 + idx * 100}px`,
           }
         : {
             position: 'absolute',
             left: '-16px',
-            top: `${80 + idx * 100 - top}px`,
+            top: `${92 + idx * 100 - top}px`,
           }
     "
   >
@@ -58,7 +58,7 @@ const less800 = computed(() => useWindowSize().width.value <= 800);
 
   svg.icon {
     @include insetTipText;
-    font-size: 48px;
+    font-size: 32px;
   }
 
   &:hover {
