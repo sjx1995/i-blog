@@ -11,7 +11,9 @@ const inMainPage = computed(() => route.fullPath === "/");
 <template>
   <CodeBg />
   <main class="content" :class="[inMainPage ? 'mini' : 'full']" ref="mainEl">
-    <NuxtPage />
+    <ISkeleton>
+      <NuxtPage />
+    </ISkeleton>
     <div class="outer-right-border"></div>
     <div class="outer-bottom-border"></div>
     <div class="footer-shadow"></div>

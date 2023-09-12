@@ -4,6 +4,9 @@
  * @Date: 2023-09-10 11:33:28
 -->
 <script setup lang="ts">
+import { useSkeleton } from "@/hooks/useSkeleton";
+useSkeleton("titleCard");
+
 // @ts-ignore
 const router = useRouter();
 

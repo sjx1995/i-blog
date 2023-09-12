@@ -3,6 +3,11 @@
  * @Author: Sunly
  * @Date: 2023-09-09 17:37:41
 -->
+<script setup lang="ts">
+import { useSkeleton } from "@/hooks/useSkeleton";
+useSkeleton("article");
+</script>
+
 <template>
   <ContentList
     path="/posts"
