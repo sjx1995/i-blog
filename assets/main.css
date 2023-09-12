@@ -3,6 +3,11 @@ body {
   font-weight: "Regular";
 }
 
+#__nuxt {
+  z-index: -2;
+  position: absolute;
+}
+
 ::-webkit-scrollbar {
   display: none;
 }

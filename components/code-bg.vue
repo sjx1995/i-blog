@@ -88,6 +88,47 @@ onMounted(() => {
       font-size: 38px;
       font-weight: 700;
       line-height: 48px;
+
+      [class^="hljs-"] {
+        transition: color 0.5s;
+        opacity: 0.3;
+      }
+      .hljs-keyword:hover {
+        color: #c678dd;
+      }
+      .hljs-title.function_:hover {
+        color: #61aeee;
+      }
+      .hljs-params:hover {
+        color: #98c379;
+      }
+      .hljs-property:hover {
+        color: #d19a66;
+      }
+      .hljs-title.class_:hover {
+        color: #e5c07b;
+      }
+      .hljs-string:hover {
+        color: #98c379;
+      }
+      .hljs-attr:hover {
+        color: #d19a66;
+      }
+      .hljs-function:hover {
+        color: #61aeee;
+      }
+      .rainbow-text:hover {
+        color: #56b6c2; /* 这是一个自定义的颜色，您可以根据需要进行调整 */
+      }
+      .hljs-number:hover {
+        color: #d19a66;
+      }
+      .hljs-literal:hover {
+        color: #56b6c2;
+      }
+      .hljs-variable.language_:hover {
+        color: #e06c75;
+      }
     }
   }
 }
