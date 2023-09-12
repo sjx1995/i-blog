@@ -24,9 +24,9 @@ const year =
     </div>
     <div class="footer-item">
       Made with
-      <Icon name="mdi:heart" />
+      <Icon name="mdi:heart" class="show-love" />
       and
-      <a href="https://nuxt.com/">
+      <a href="https://nuxt.com/" target="_blank">
         <Icon name="cib:nuxt-js" />
       </a>
     </div>
@@ -45,6 +45,7 @@ const year =
   overflow: hidden;
   padding: 8px 0 0 16px;
   box-sizing: border-box;
+  user-select: none;
 }
 .footer .footer-item {
   @include insetTipText;
@@ -62,6 +63,13 @@ const year =
     &:hover {
       color: $tip_text_hover_color;
       text-decoration: underline;
+    }
+  }
+
+  .show-love {
+    transition: color 0.3s;
+    &:hover {
+      color: #f5222d;
     }
   }
 }
