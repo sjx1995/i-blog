@@ -47,7 +47,7 @@ const inMainPage = computed(() => route.fullPath === "/");
 .content {
   position: relative;
   padding-top: 4px;
-  padding-bottom: 210px;
+  padding-bottom: 240px;
   background-color: $content_color;
   margin-bottom: 108px;
   &.full {

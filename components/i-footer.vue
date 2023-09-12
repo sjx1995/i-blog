@@ -22,7 +22,14 @@ const year =
         About me
       </a>
     </div>
-    <div class="footer-item">Powered by Nuxt</div>
+    <div class="footer-item">
+      Made with
+      <Icon name="mdi:heart" />
+      and
+      <a href="https://nuxt.com/">
+        <Icon name="cib:nuxt-js" />
+      </a>
+    </div>
   </div>
 </template>
 
@@ -43,14 +50,14 @@ const year =
   @include insetTipText;
   font-size: 16px;
   line-height: 24px;
+  .icon {
+    font-size: 20px;
+    color: #00000088;
+  }
+
   a {
     color: $tip_text_color;
     text-decoration: none;
-
-    .icon {
-      font-size: 20px;
-      color: #00000088;
-    }
 
     &:hover {
       color: $tip_text_hover_color;
