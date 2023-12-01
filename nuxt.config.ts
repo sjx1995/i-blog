@@ -13,6 +13,11 @@ export default defineNuxtConfig({
     "@/node_modules/normalize.css/normalize.css",
     "@/node_modules/animate.css/animate.min.css",
   ],
+  content: {
+    highlight: {
+      theme: "github-light",
+    },
+  },
   experimental: {
     /**
      * see: https://v3.nuxtjs.org/api/configuration/nuxt.config#inlinessrstyles

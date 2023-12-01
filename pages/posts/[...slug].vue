@@ -7,7 +7,6 @@
 import { useSkeleton } from "@/hooks/useSkeleton";
 useSkeleton("titleCard");
 
-// @ts-ignore
 const router = useRouter();
 
 const mainEl = ref<HTMLDivElement | null>(null);
@@ -40,17 +39,36 @@ const handleToTop = () => {
       />
     </transition>
 
-    <ContentDoc />
+    <ContentDoc class="markdown-body" />
   </article>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
+@import "@/assets/markdown.css";
+
 .article-main {
   position: relative;
   padding: 32px 64px;
   .article-tool {
     left: -16px;
     z-index: 20;
+  }
+  .markdown-body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 40px;
+  }
+}
+
+@media (max-width: 767px) {
+  .article-main {
+    position: relative;
+    padding: 8px 16px;
+    .markdown-body {
+      padding: 24px 32px;
+    }
   }
 }
 </style>
