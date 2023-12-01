@@ -49,10 +49,10 @@ const year =
 }
 .footer .footer-item {
   @include insetTipText;
-  font-size: 16px;
+  font-size: 14px;
   line-height: 24px;
   .icon {
-    font-size: 20px;
+    font-size: 18px;
     color: #00000088;
   }
 

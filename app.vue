@@ -212,7 +212,7 @@ const inMainPage = computed(() => route.fullPath === "/");
     background-color: $footer_color;
     right: 0;
     bottom: 96px;
-    width: 260px;
+    width: 200px;
     height: 88px;
   }
   .footer-shadow {
@@ -220,7 +220,7 @@ const inMainPage = computed(() => route.fullPath === "/");
     background-color: $footer_shadow_color;
     right: 0;
     bottom: 72px;
-    width: 260px;
+    width: 200px;
     height: 24px;
     &::after {
       content: "";
@@ -234,7 +234,6 @@ const inMainPage = computed(() => route.fullPath === "/");
     }
   }
 }
-// }
 
 .content.full {
   .border-top {
