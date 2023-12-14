@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   ],
   site: {
     url: "https://blog.sunly.in",
+    name: "Sunly's Blog",
   },
   sitemap: {
     enabled: true,
