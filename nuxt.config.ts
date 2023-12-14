@@ -5,7 +5,20 @@
  */
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/content", "nuxt-icon", "@vueuse/nuxt"],
+  modules: [
+    "@nuxt/content",
+    "nuxt-icon",
+    "@vueuse/nuxt",
+    "nuxt-simple-sitemap",
+  ],
+  site: {
+    url: "https://blog.sunly.in",
+  },
+  sitemap: {
+    enabled: true,
+    autoLastmod: true,
+    discoverImages: true,
+  },
   devtools: { enabled: true },
   css: [
     "@chinese-fonts/lxgwwenkai/dist/LXGWWenKai-Bold/result.css",
@@ -14,6 +27,7 @@ export default defineNuxtConfig({
     "@/node_modules/animate.css/animate.min.css",
   ],
   content: {
+    documentDriven: true,
     highlight: {
       theme: "github-light",
     },
@@ -36,4 +50,13 @@ export default defineNuxtConfig({
       drop: ["console", "debugger"],
     },
   },
+  // nitro: {
+  //   prerender: {
+  //     crawlLinks: true,
+  //     routes: ["/"],
+  //   },
+  // },
+  // routeRules: {
+  //   "/": { prerender: true },
+  // },
 });
