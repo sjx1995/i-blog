@@ -5,7 +5,13 @@
 -->
 <script setup lang="ts">
 import { useSkeleton } from "@/hooks/useSkeleton";
+
 useSkeleton("article");
+
+useSeoMeta({
+  title: "Sunly's Blog",
+  description: "Sunly 的博客",
+});
 </script>
 
 <template>
