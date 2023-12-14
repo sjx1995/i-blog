@@ -1,5 +1,5 @@
 /*
- * @Description:
+ * @Description: nuxt config
  * @Author: Sunly
  * @Date: 2023-09-09 17:21:12
  */
