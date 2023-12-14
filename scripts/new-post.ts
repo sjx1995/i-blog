@@ -13,13 +13,24 @@ const getFilePath = (filename: string) => {
 };
 
 const createTemplate = (title: string, desc: string, tags: string) => {
-  const time = dayjs().format("YYYY-MM-DD HH:mm");
+  const time = dayjs();
   return (
     `---\n` +
     `title: ${title.trim()}\n` +
     `description: ${desc.trim()}\n` +
     `tag: ${tags.trim()}\n` +
-    `dateTime: ${time}\n` +
+    `dateTime: ${time.toISOString()}\n` +
+    `sitemap:\n` +
+    `  lastmod: ${time.toISOString()}\n` +
+    `  updatePeriod: monthly\n` +
+    `head:\n` +
+    `  meta:\n` +
+    `    - name: 'keywords'\n` +
+    `      content: '${tags.trim()}'\n` +
+    `    - name: 'author'\n` +
+    `      content: 'sunly(https://github.com/sjx1995)'\n` +
+    `    - name: 'copyright'\n` +
+    `      content: '© ${time.year} Sunly'\n` +
     `---\n`
   );
 };

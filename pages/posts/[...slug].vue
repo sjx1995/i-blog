@@ -5,7 +5,11 @@
 -->
 <script setup lang="ts">
 import { useSkeleton } from "@/hooks/useSkeleton";
+
 useSkeleton("titleCard");
+
+const { page } = useContent();
+console.log("🚀 ~ file: [...slug].vue:12 ~ page:", page);
 
 const router = useRouter();
 

@@ -2,7 +2,18 @@
 title: vue-router详解
 description: 关于vue-router的方方面面
 tag: vue vue-router
-dateTime: 2023-09-13 06:55
+dateTime: 2023-09-12T22:55:24.398Z
+sitemap:
+  lastmod: 2023-09-12T22:55:24.398Z
+  updatePeriod: monthly
+head:
+  meta:
+    - name: 'keywords'
+      content: 'vue vue-router'
+    - name: 'author'
+      content: 'sunly(https://github.com/sjx1995)'
+    - name: 'copyright'
+      content: '© 2023 Sunly'
 ---
 ## 什么是 vue-router
 

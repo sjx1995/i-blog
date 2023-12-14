@@ -4,6 +4,8 @@
  * @Date: 2023-09-10 14:53:21
 -->
 <script setup lang="ts">
+import dayjs from "dayjs";
+
 const router = useRouter();
 
 withDefaults(
@@ -28,7 +30,9 @@ withDefaults(
     <div class="menu-item" @click="() => router.push({ path: url })">
       <div class="title">{{ title }}</div>
       <div class="desc">{{ desc }}</div>
-      <div class="date-time">发布时间: {{ dateTime }}</div>
+      <div class="date-time">
+        发布时间: {{ dayjs(dateTime).format("YYYY-MM-DD HH:mm") }}
+      </div>
     </div>
   </div>
 </template>

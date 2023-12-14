@@ -2,7 +2,18 @@
 title: 搭建PVE服务器
 description: 搭建家庭服务器，使用PVE做服务器虚拟环境，并安装OpenWRT软理由系统管理整个网络
 tag: server pve openwrt
-dateTime: 2023-05-07 14:35
+dateTime: 2023-05-07T06:35:17.822Z
+sitemap:
+  lastmod: 2023-05-07T06:35:17.822Z
+  updatePeriod: monthly
+head:
+  meta:
+    - name: 'keywords'
+      content: 'server pve openwrt'
+    - name: 'author'
+      content: 'sunly(https://github.com/sjx1995)'
+    - name: 'copyright'
+      content: '© 2023 Sunly'
 ---
 # 搭建PVE服务器
 
